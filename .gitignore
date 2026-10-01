@@ -1,0 +1,10 @@
+# Build outputs (recreated by dotnet build / F5)
+bin/
+obj/
+# Published standalone executable (distributed through GitHub Releases)
+Executable/
+# Results produced by the program
+IMAGES-résultat/
+# IDE files
+.vs/
+*.user

@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lancer EMP_SID (Debug)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/EMP_SID/bin/Debug/net10.0-windows/win-x64/EMP_SID.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}/EMP_SID/bin/Debug/net10.0-windows/win-x64",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    }
+  ]
+}

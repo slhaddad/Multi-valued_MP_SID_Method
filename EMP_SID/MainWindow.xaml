@@ -1,0 +1,21 @@
+﻿<Window x:Class="EMP_SID.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EMP_SID"
+        mc:Ignorable="d"
+        Title="EMP_SID" Height="350" Width="525">
+    <Grid x:Name="grille">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextAlignment="Center" Margin="40,38,40,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="PROFIL MORPHOLOGIQUE MULTI-BANDES - DISTANCE CUMULÉE SID - NOMBRE DE BANDES VARIABLE"/>
+        <TextBlock x:Name="textBlock1" TextAlignment="Center" HorizontalAlignment="Left" Width="120" TextWrapping="Wrap" Text="Donnez la taille maximale de l'ES : i =" VerticalAlignment="Top" Margin="14,101,0,0"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="155,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="324,144,0,0" TextWrapping="Wrap" Text="Selection bande" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Parcourir" HorizontalAlignment="Left" Margin="424,144,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <TextBlock x:Name="textBlock1_Copy" TextAlignment="Center" HorizontalAlignment="Left" Width="120" TextWrapping="Wrap" VerticalAlignment="Top" Margin="14,154,0,0"><Run Text="Donnez le nombre d'itérations pour la stabilité"/><Run Text=" : ( 0 = infini )"/></TextBlock>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="155,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button1" Content="Executer" HorizontalAlignment="Left" Margin="368,220,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <TextBlock x:Name="textBlock1_Copy1" TextAlignment="Center" HorizontalAlignment="Left" Width="124" TextWrapping="Wrap" VerticalAlignment="Top" Margin="14,226,0,0"><Run Text="Donnez le "/><Run Text="pourcentage de ressemblance :"/><LineBreak/><Run Text="(0 - 100)"/></TextBlock>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="155,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
