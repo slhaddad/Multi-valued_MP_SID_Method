@@ -12,7 +12,7 @@
     <AssemblyName>EMP_SID</AssemblyName>
     <AssemblyTitle>EMP_SID</AssemblyTitle>
     <Product>EMP_SID</Product>
-    <Version>2.0.0</Version>
+    <Version>4.0.0</Version>
   </PropertyGroup>
 
   <!-- Publication : exécutable Windows 64 bits autonome, en un seul fichier (aucun .NET requis sur la machine cible) -->
