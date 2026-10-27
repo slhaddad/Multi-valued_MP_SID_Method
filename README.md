@@ -19,7 +19,8 @@ The supremum and infimum obtained in every neighborhood are used to compute, for
 - **Development environment:** Visual Studio Code with the *C# Dev Kit* extension
 - **Operating system:** Windows 64-bit (WPF is Windows-only)
 - **Structuring element:** Euclidean disk of radius i (pixels with dx² + dy² ≤ i²: 5, 13, 29, 49 and 81 pixels for i = 1 to 5), used in a single pass: all the pixel-vectors covered by the disk are ranked together. Border pixels whose disk falls outside the image are kept unchanged. The geodesic reconstruction uses the elementary disk of radius 1 (5 pixels).
-- **Reconstruction (version 4):** the pointwise infimum and supremum between two pixel-vectors in the geodesic reconstruction no longer compare the two vectors alone, which is not transitive and can produce Condorcet cycles (A > B, B > C and C > A). Each pixel-vector now receives the method's own score computed against a fixed reference set of at most 256 pixel-vectors sampled from the input image; equal scores are broken by the lexicographic order of the bands. This gives a fixed total order, and the marker sequence is kept monotone, so the reconstruction always stops on an exact fixed point (use `0` iterations and `100` % for the exact reconstruction). The ranking of the pixel-vectors of the neighborhood is unchanged. The added code is marked `[V4-ANTI-CONDORCET]` in `MainWindow.xaml.cs`.
+- **Reconstruction (version 4):** the pointwise infimum and supremum between two pixel-vectors in the geodesic reconstruction no longer compare the two vectors alone, which is not transitive and can produce Condorcet cycles (A > B, B > C and C > A). Each pixel-vector now receives the method's own score computed against a fixed reference set of pixel-vectors sampled from the input image (see version 5 below); equal scores are broken by the lexicographic order of the bands. This gives a fixed total order, and the marker sequence is kept monotone, so the reconstruction always stops on an exact fixed point (use `0` iterations and `100` % for the exact reconstruction). The ranking of the pixel-vectors of the neighborhood is unchanged. The added code is marked `[V4-ANTI-CONDORCET]` in `MainWindow.xaml.cs`.
+- **Reference set (version 5):** the reference set used for this fixed order is now a regular grid of 64 x 64 pixel-vectors (at most 4,096) covering the whole image, instead of 256 pixel-vectors taken one every s pixels, which could all fall on a single image line. The added code is marked `[V5]` in `MainWindow.xaml.cs`.
 - **Interface language:** French
 
 ## Repository content
@@ -39,7 +40,7 @@ EMP_SID/
 
 ### Option 1 — Standalone executable (no installation)
 
-Download `EMP_SID.exe` from the **Releases** page of this repository, if available, and double-click it. It is self-contained: neither .NET nor VS Code is required. You can also build it yourself with Option 3.
+Download `EMP_SID.exe` from the [**Releases**](https://github.com/slhaddad/Multi-valued_MP_SID_Method/releases/latest) page of this repository (latest release, `v5`) and double-click it. The results are written to the `IMAGES-résultat` folder created next to the executable (see *Outputs* below). It is self-contained: neither .NET nor VS Code is required. You can also build it yourself with Option 3.
 
 ### Option 2 — Visual Studio Code
 
